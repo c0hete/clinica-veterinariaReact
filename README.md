@@ -16,6 +16,7 @@ git clone https://github.com/c0hete/clinica-veterinariaReact.git
 cd clinica-veterinaria
 
 Configurar las variables de entorno
+
 En la raíz encontrarás un archivo llamado .env.example. Debes duplicarlo y renombrarlo a .env:
 cp .env.example .env
 En ese archivo encontrarás dos rutas API. Solo debes mantener una activa (sin #) y comentar la otra. Por ejemplo:
@@ -29,7 +30,9 @@ Si deseas usar la API local, debes levantar el backend (ver instrucciones más a
 Instalar dependencias
 
 npm install
+
 Ejecutar la aplicación
+
 npm run dev
 Esto abrirá la aplicación en tu navegador, generalmente en http://localhost:5173.
 
