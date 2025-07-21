@@ -34,23 +34,35 @@ npm install
 Ejecutar la aplicación
 
 npm run dev
+
 Esto abrirá la aplicación en tu navegador, generalmente en http://localhost:5173.
 
 API local (opcional)
+
 La prueba original solo solicitaba el frontend, pero para poder probar la funcionalidad, se creó una API REST sencilla en Express. Puedes optar por usarla o conectarte a la API pública mencionada antes.
 
 1. Clonar y configurar la API
+
 cd API
+
 cp .env.example .env
+
 Agrega tu contraseña MySQL al archivo .env.
 
+
 2. Crear la base de datos
+
 Abre tu cliente MySQL (como phpMyAdmin o Workbench), copia el contenido del archivo scriptBD-veterinaria.txt y ejecútalo para crear la base de datos veterinaria y sus tablas.
 
+
 3. Instalar dependencias y levantar API
+
 npm install
+
 node index.js
+
 Esto levantará la API en http://localhost:3001/api.
+
 
 Estructura de carpetas
 /src
@@ -61,7 +73,9 @@ Estructura de carpetas
     /ReservaProcedimiento
   /services
   /components
+
 Consideraciones finales
+
 La API fue creada únicamente con fines de prueba, ya que no se logró acceder a la API original entregada.
 
 El archivo .env se deja accesible porque el proyecto es educativo, y no maneja información sensible.
