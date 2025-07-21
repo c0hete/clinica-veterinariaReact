@@ -9,9 +9,12 @@ Backend: Node.js + Express + MySQL (opcional, ver más abajo)
 Base de datos: MySQL 8.x
 
 Instrucciones de uso
+
 Clonar el repositorio
+
 git clone https://github.com/c0hete/clinica-veterinariaReact.git
 cd clinica-veterinaria
+
 Configurar las variables de entorno
 En la raíz encontrarás un archivo llamado .env.example. Debes duplicarlo y renombrarlo a .env:
 cp .env.example .env
