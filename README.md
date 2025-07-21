@@ -10,37 +10,23 @@ Base de datos: MySQL 8.x
 
 Instrucciones de uso
 Clonar el repositorio
-bash
-Copiar
-Editar
-git clone https://github.com/tu-usuario/clinica-veterinaria.git
+git clone https://github.com/c0hete/clinica-veterinariaReact.git
 cd clinica-veterinaria
 Configurar las variables de entorno
 En la raíz encontrarás un archivo llamado .env.example. Debes duplicarlo y renombrarlo a .env:
-
-bash
-Copiar
-Editar
 cp .env.example .env
 En ese archivo encontrarás dos rutas API. Solo debes mantener una activa (sin #) y comentar la otra. Por ejemplo:
 
-env
-Copiar
-Editar
+
 # VITE_API_BASE_URL=http://67.205.142.104:3000/api
 VITE_API_BASE_URL=http://localhost:3001/api
 Si deseas usar la API remota (ya funcional), comenta la local.
 Si deseas usar la API local, debes levantar el backend (ver instrucciones más abajo).
 
 Instalar dependencias
-bash
-Copiar
-Editar
+
 npm install
 Ejecutar la aplicación
-bash
-Copiar
-Editar
 npm run dev
 Esto abrirá la aplicación en tu navegador, generalmente en http://localhost:5173.
 
@@ -48,9 +34,6 @@ API local (opcional)
 La prueba original solo solicitaba el frontend, pero para poder probar la funcionalidad, se creó una API REST sencilla en Express. Puedes optar por usarla o conectarte a la API pública mencionada antes.
 
 1. Clonar y configurar la API
-bash
-Copiar
-Editar
 cd API
 cp .env.example .env
 Agrega tu contraseña MySQL al archivo .env.
@@ -59,17 +42,11 @@ Agrega tu contraseña MySQL al archivo .env.
 Abre tu cliente MySQL (como phpMyAdmin o Workbench), copia el contenido del archivo scriptBD-veterinaria.txt y ejecútalo para crear la base de datos veterinaria y sus tablas.
 
 3. Instalar dependencias y levantar API
-bash
-Copiar
-Editar
 npm install
 node index.js
 Esto levantará la API en http://localhost:3001/api.
 
 Estructura de carpetas
-bash
-Copiar
-Editar
 /src
   /views
     /Dueno
