@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS veterinaria;
+USE veterinaria;
+
+CREATE TABLE dueno (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_completo VARCHAR(100) NOT NULL,
+  rut VARCHAR(12) NOT NULL UNIQUE,
+  telefono VARCHAR(20) NOT NULL,
+  correo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE mascota (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_mascota VARCHAR(50) NOT NULL,
+  tipo_animal VARCHAR(20) NOT NULL,
+  edad INT NOT NULL,
+  raza VARCHAR(50) NOT NULL,
+  id_dueno INT NOT NULL,
+  FOREIGN KEY (id_dueno) REFERENCES dueno(id) ON DELETE CASCADE
+);
+
+CREATE TABLE veterinario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_completo VARCHAR(100) NOT NULL,
+  especialidad VARCHAR(50) NOT NULL,
+  telefono VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE reserva_procedimiento (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  id_mascota INT NOT NULL,
+  id_veterinario INT NOT NULL,
+  tipo_procedimiento VARCHAR(50) NOT NULL,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  FOREIGN KEY (id_mascota) REFERENCES mascota(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_veterinario) REFERENCES veterinario(id) ON DELETE CASCADE
+);
