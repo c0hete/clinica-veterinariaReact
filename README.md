@@ -1,4 +1,5 @@
 Clínica Veterinaria - React App
+
 Este proyecto corresponde a la evaluación N3 del módulo de React. Se trata de una aplicación CRUD de gestión para una clínica veterinaria, que incluye gestión de Dueños, Mascotas, Veterinarios y Reservas de procedimientos.
 
 Tecnologías utilizadas
